@@ -24,11 +24,11 @@ import {colors} from './src/styles/colors';
 import {setLng, getLng} from './src/helper/changeLng';
 
 const App = () => {
-  const [selectedCountry, setSelectedCountry] = useState('');
-  const [allCountries, setAllCountries] = useState([]);
+  // const [selectedCountry, setSelectedCountry] = useState('');
+  // const [allCountries, setAllCountries] = useState([]);
 
   useEffect(() => {
-    getCountryNames();
+    //getCountryNames();
 
     selectedLng();
   }, []);
@@ -41,15 +41,15 @@ const App = () => {
     console.log('selected Language data==>>>', lngData);
   };
 
-  const getCountryNames = async () => {
-    try {
-      const res = await axios.get('https://restcountries.eu/rest/v2/all');
-      // console.log("res==>>>>", res)
-      setAllCountries(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getCountryNames = async () => {
+  //   try {
+  //     const res = await axios.get('https://restcountries.eu/rest/v2/all');
+  //     // console.log("res==>>>>", res)
+  //     setAllCountries(res.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const onChangeLng = async (lng) => {
     if (lng === 'en') {
