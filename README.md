@@ -1,0 +1,1 @@
+## adb -s ZY3223GLJD  reverse tcp:8081 tcp:8081 && npx react-native start
